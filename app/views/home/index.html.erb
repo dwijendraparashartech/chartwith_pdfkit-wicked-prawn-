@@ -1,0 +1,15 @@
+<h1><%= @welcome %></h1>
+<h1>Home#index</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+<%= pie_chart Yogurt.group(:flavor).count %>
+
+<%= link_to 'Download Pdf with Prawn', home_download_pdf_with_prawn_path %>
+<br />
+<%= link_to 'View Pdf with Prawn', home_view_pdf_with_prawn_path %>
+<br />
+<%= link_to 'View Pdf with WickedPDF', '/home/view_pdf_with_wickedpdf.pdf' %>
+<br />
+<%#= link_to 'Download Pdf with PDFkit', home_download_pdf_with_pdfkit_path %>
+<br />
+<%#= link_to 'View Pdf with Pdfkit', home_view_pdf_with_pdfkit_path %>
+<br />

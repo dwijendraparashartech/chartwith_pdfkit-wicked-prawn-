@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Yogurts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Flavor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yogurts.each do |yogurt| %>
+      <tr>
+        <td><%= yogurt.flavor %></td>
+        <td><%= link_to 'Show', yogurt %></td>
+        <td><%= link_to 'Edit', edit_yogurt_path(yogurt) %></td>
+        <td><%= link_to 'Destroy', yogurt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Yogurt', new_yogurt_path %>

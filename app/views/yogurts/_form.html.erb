@@ -1,0 +1,22 @@
+<%= form_with(model: yogurt) do |form| %>
+  <% if yogurt.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(yogurt.errors.count, "error") %> prohibited this yogurt from being saved:</h2>
+
+      <ul>
+        <% yogurt.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :flavor %>
+    <%= form.text_field :flavor %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
